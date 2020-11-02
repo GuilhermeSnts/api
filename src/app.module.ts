@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
+import { PartyModule } from './party/party.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [],
+  imports: [TypeOrmModule.forRoot(), PartyModule],
   controllers: [],
-  providers: [],
 })
 export class AppModule {}

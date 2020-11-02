@@ -1,0 +1,11 @@
+{
+  "name": "default",
+  "type": "sqlite",
+  "database": "./database.sqlite",
+  "synchronize": "true",
+  "autoSchemaSync": true,
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "cli": {
+    "entitiesDir": "src/**/*.entity{.ts,.js}"
+  }
+}
