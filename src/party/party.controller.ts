@@ -1,4 +1,5 @@
 import { Body, Controller, Post, Get, Param, Delete } from '@nestjs/common';
+import { ApiOperation } from '@nestjs/swagger';
 import { Party } from './party.entity';
 import { PartyService } from './party.service';
 
@@ -7,6 +8,7 @@ export class PartyController {
   constructor(private readonly service: PartyService) {}
 
   @Post()
+  @ApiOperation({ summary: 'Create party' })
   async create(@Body() model: Party) {
     delete model.id;
     this.service.create(model);
